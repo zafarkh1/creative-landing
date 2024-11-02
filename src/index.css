@@ -1,13 +1,47 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.myContainer {
+  @apply container mx-auto lg:py-6 py-2;
+}
+
+.heading1 {
+  @apply lg:text-7xl text-3xl font-medium lg:leading-snug leading-10;
+}
+
+.heading2 {
+  @apply lg:text-4xl text-2xl font-bold;
+}
+
+.heading3 {
+  @apply lg:text-3xl text-xl font-medium;
+}
+
+.heading5 {
+  @apply lg:text-2xl text-base font-medium lg:leading-8 leading-6;
+}
+
+.text {
+  @apply lg:text-base text-sm;
+}
+
+.smtext {
+  @apply lg:text-sm text-xs;
+}
+
+.flexBetween {
+  @apply flex items-center justify-between;
+}
+
+.flexCenter {
+  @apply flex items-center justify-center;
+}
+
+.leaflet-container {
+  z-index: 1;
 }
